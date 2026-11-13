@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>遗迹骑行 · Relic Ride</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="hud">
+    <div class="hud-block">
+      <span class="label">距离</span>
+      <strong id="distance">0</strong>
+    </div>
+    <div class="hud-block">
+      <span class="label">金币</span>
+      <strong id="coins">0</strong>
+    </div>
+    <div class="hud-block">
+      <span class="label">坐骑</span>
+      <strong id="mount-name">—</strong>
+    </div>
+    <button id="music-btn" type="button" aria-label="音乐开关">🔊</button>
+  </div>
+
+  <div id="overlay" class="panel">
+    <div class="card">
+      <p class="eyebrow">霓虹遗迹 · 三车道跑酷</p>
+      <h1>遗迹骑行</h1>
+      <p class="lead">在夜色中的崩塌神庙步道上骑乘冲刺。青色虚线把路面分成三条车道：左右换道，空格跳跃，下滑躲过红色横梁。坐骑决定速度、跳跃和身形。</p>
+      <div class="mounts" id="mount-picker">
+        <button class="mount-card selected" data-mount="tricycle" type="button">
+          <span class="icon">🚲</span>
+          <strong>三轮车</strong>
+          <small>灵活 · 窄车身 · 中速</small>
+        </button>
+        <button class="mount-card" data-mount="horse" type="button">
+          <span class="icon">🐎</span>
+          <strong>马</strong>
+          <small>最快 · 跳得高 · 中等体积</small>
+        </button>
+        <button class="mount-card" data-mount="carriage" type="button">
+          <span class="icon">🛒</span>
+          <strong>马车</strong>
+          <small>最稳 · 可碾碎矮障 · 车身最宽</small>
+        </button>
+      </div>
+      <div class="legend">
+        <span><i class="dot-rock"></i>橙色碎石 · 跳或换道</span>
+        <span><i class="dot-pillar"></i>洋红石柱 · 必须换道</span>
+        <span><i class="dot-beam"></i>红色横梁 · 下滑钻过</span>
+        <span><i class="dot-gap"></i>紫色裂缝 · 必须跳跃</span>
+      </div>
+      <button id="start-btn" type="button" onclick="window.startGame && window.startGame()">开始骑行</button>
+      <p class="hint">键盘：← → 换道 · 空格 / ↑ 跳跃 · ↓ 下滑 · 触屏滑动</p>
+    </div>
+  </div>
+
+  <div id="crash" class="panel hidden">
+    <div class="card">
+      <h2>坠落了</h2>
+      <p id="crash-summary"></p>
+      <button id="retry-btn" type="button">换坐骑再来</button>
+    </div>
+  </div>
+
+  <canvas id="game"></canvas>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./three.module.js"
+      }
+    }
+  </script>
+  <script type="module" src="game.js"></script>
+</body>
+</html>
