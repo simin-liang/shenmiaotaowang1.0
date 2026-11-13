@@ -2,7 +2,6 @@
 
 一款纯前端 Three.js 三车道跑酷游戏。骑上三轮车、骏马或马车，在霓虹遗迹赛道上躲避障碍、收集金币，跑得越远越好。
 
-- **在线试玩**：[relic-ride-runner.app.workbuddy.host](https://relic-ride-runner.app.workbuddy.host/?sharecode=C5WNDAAHCM)（手机 / 电脑均可）
 - **离线试玩**：下载 [`dist/relic-ride.html`](dist/relic-ride.html)，双击即可运行，无需联网、无需安装任何东西
 
 ## 游戏截图

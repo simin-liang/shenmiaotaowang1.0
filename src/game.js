@@ -1029,7 +1029,6 @@ function startFromMenu() {
     resetRun();
   } catch (err) {
     console.error(err);
-    window.__gameError = String(err && err.stack ? err.stack : err);
   }
 }
 
