@@ -5,6 +5,19 @@
 - **在线试玩**：[relic-ride-runner.app.workbuddy.host](https://relic-ride-runner.app.workbuddy.host/?sharecode=C5WNDAAHCM)（手机 / 电脑均可）
 - **离线试玩**：下载 [`dist/relic-ride.html`](dist/relic-ride.html)，双击即可运行，无需联网、无需安装任何东西
 
+## 游戏截图
+
+| 奔跑中的霓虹赛道 | 下滑躲避（贴地姿态） |
+| :---: | :---: |
+| ![奔跑中的霓虹赛道](screenshots/gameplay.png) | ![下滑躲避](screenshots/slide.png) |
+| **坐骑 · 马** | **坐骑 · 马车** |
+| ![坐骑 · 马](screenshots/mount-horse.png) | ![坐骑 · 马车](screenshots/mount-carriage.png) |
+
+<p align="center">
+  <img src="screenshots/menu-mobile.png" alt="手机端开始菜单" width="320" /><br/>
+  <em>手机端开始菜单（响应式布局，一屏放下）</em>
+</p>
+
 ## 玩法
 
 三车道冲刺，按障碍颜色决定操作：
@@ -61,6 +74,7 @@ python build.py        # 重新生成 dist/relic-ride.html
 │   └── three.module.js         # Three.js r160（本地化依赖，离线可玩）
 ├── dist/
 │   └── relic-ride.html        # 单文件成品（约 1.4MB，双击即玩）
+├── screenshots/               # README 展示用的游戏截图
 └── docs/
     └── 遗迹骑行-项目说明与小白手册.docx   # 完整项目文档
 ```
